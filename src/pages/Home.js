@@ -3,7 +3,6 @@ import Typewriter from 'typewriter-effect';
 import '../App.css'; 
 
 const Home = () => {
-  // เปลี่ยนหัวข้อเป็นด้าน Electronics & Computer Technology
   const scrollingItems = [
     { title: "EMBEDDED SYSTEMS", desc: "ออกแบบและพัฒนาซอฟต์แวร์ควบคุมไมโครคอนโทรลเลอร์" },
     { title: "IOT SOLUTIONS", desc: "เชื่อมต่ออุปกรณ์ Hardware เข้ากับระบบ Cloud และ Application" },
@@ -12,36 +11,45 @@ const Home = () => {
     { title: "PCB DESIGN", desc: "ออกแบบแผ่นวงจรพิมพ์สำหรับการใช้งานเฉพาะทาง" },
   ];
 
-  // เบิ้ลรายการเพื่อให้วิ่งวนได้เนียนตา
   const doubledItems = [...scrollingItems, ...scrollingItems, ...scrollingItems];
 
   return (
     <div style={styles.container}>
+      {/* เอฟเฟกต์แสงฟุ้งด้านหลังเพิ่มมิติ */}
       <div style={styles.backgroundGlow}></div>
+      <div style={styles.backgroundGlowSecondary}></div>
 
       <div style={styles.heroSection}>
-        <span style={styles.preTitle}>WELCOME TO MY PORTFOLIO</span>
-        
-        <h1 style={styles.title}>
-          Hello, I'm <span style={styles.highlightText}>
-            <Typewriter
-              options={{
-                strings: ["Computer Tech Student", "Electronics Dev"],
-                autoStart: true,
-                loop: true,
-                delay: 75,
-              }}
-            />
-          </span>
-        </h1>
+        <div style={styles.contentBox}>
+          <span style={styles.preTitle}>WELCOME TO MY DIGITAL SPACE</span>
+          
+          <h1 style={styles.title}>
+            Hello, I'm <br/>
+            <span style={styles.highlightText}>
+              <Typewriter
+                options={{
+                  strings: ["Pawin Saetan", "Computer Tech Student", "Electronics Dev"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                }}
+              />
+            </span>
+          </h1>
 
-        <p style={styles.subtitle}>
-        นักศึกษาเทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์ @KMUTNB<br/>
-        "ออกแบบวงจร พัฒนาสมองกล เชื่อมโยง Software สู่โลกความเป็นจริง"
-        </p>
+          <p style={styles.subtitle}>
+            นักศึกษา <span style={styles.accentText}>เทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์</span> @KMUTNB<br/>
+            <span style={styles.description}>"ออกแบบวงจร พัฒนาสมองกล เชื่อมโยง Software สู่โลกความเป็นจริง"</span>
+          </p>
 
-        {/* --- ส่วนกล่องวนๆ --- */}
-        <div className="marquee-container">
+          <div style={styles.buttonGroup}>
+             <button style={styles.primaryBtn}>Explore Projects</button>
+             <button style={styles.secondaryBtn}>Contact Me</button>
+          </div>
+        </div>
+
+        {/* --- Marquee Section --- */}
+        <div className="marquee-container" style={styles.marqueeWrapper}>
           <div className="marquee-content">
             {doubledItems.map((item, index) => (
               <div key={index} style={styles.card}>
@@ -65,71 +73,108 @@ const styles = {
     backgroundColor: '#0a0a0a',
     color: 'white',
     overflow: 'hidden',
-    position: 'relative'
+    position: 'relative',
+    fontFamily: "'Inter', sans-serif"
   },
   backgroundGlow: {
     position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    background: 'radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%)',
+    top: '-10%',
+    right: '-5%',
+    width: '50%',
+    height: '60%',
+    background: 'radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%)',
+    zIndex: 0
+  },
+  backgroundGlowSecondary: {
+    position: 'absolute',
+    bottom: '-10%',
+    left: '-5%',
+    width: '50%',
+    height: '60%',
+    background: 'radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%)',
     zIndex: 0
   },
   heroSection: {
     textAlign: 'center',
     width: '100%',
-    maxWidth: '1200px',
-    zIndex: 1
+    zIndex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
-  preTitle: { letterSpacing: '3px', color: '#555', fontSize: '0.8rem', fontWeight: 'bold' },
+  contentBox: {
+    maxWidth: '800px',
+    padding: '0 20px',
+    marginBottom: '50px'
+  },
+  preTitle: { 
+    letterSpacing: '5px', 
+    color: '#3b82f6', 
+    fontSize: '0.75rem', 
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    display: 'block',
+    marginBottom: '10px'
+  },
   title: { 
-    fontSize: '3.5rem', 
-    margin: '20px 0', 
-    display: 'flex', 
-    justifyContent: 'center', 
-    gap: '15px',
-    fontWeight: '800'
+    fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
+    margin: '10px 0', 
+    lineHeight: '1.1',
+    fontWeight: '900',
+    letterSpacing: '-1px'
   },
-  highlightText: { color: '#3b82f6' },
+  highlightText: { 
+    color: '#3b82f6',
+    display: 'inline-block',
+    minHeight: '1.2em'
+  },
   subtitle: { 
-    color: '#999', 
+    color: '#aaa', 
     lineHeight: '1.8', 
-    marginBottom: '40px',
-    fontSize: '1.1rem' 
+    fontSize: '1.15rem',
+    fontWeight: '300',
+    marginTop: '25px'
   },
-  buttonGroup: { display: 'flex', gap: '20px', justifyContent: 'center', marginBottom: '60px' },
+  accentText: { color: '#fff', fontWeight: '600' },
+  description: { display: 'block', marginTop: '10px', fontStyle: 'italic', color: '#666' },
+  buttonGroup: { display: 'flex', gap: '15px', justifyContent: 'center', marginTop: '40px' },
   primaryBtn: { 
-    padding: '14px 30px', 
-    backgroundColor: '#2563eb', 
+    padding: '12px 28px', 
+    backgroundColor: '#3b82f6', 
     border: 'none', 
-    borderRadius: '10px', 
+    borderRadius: '50px', 
     color: 'white', 
-    fontWeight: 'bold', 
+    fontWeight: '700', 
     cursor: 'pointer',
-    transition: 'all 0.3s ease',
-    boxShadow: '0 4px 15px rgba(37, 99, 235, 0.3)'
+    transition: '0.3s',
+    fontSize: '0.95rem'
   },
   secondaryBtn: { 
-    padding: '14px 30px', 
-    backgroundColor: 'rgba(255,255,255,0.05)', 
+    padding: '12px 28px', 
+    backgroundColor: 'transparent', 
     border: '1px solid #333', 
-    borderRadius: '10px', 
-    color: 'white', 
+    borderRadius: '50px', 
+    color: '#fff', 
     cursor: 'pointer',
-    transition: 'all 0.3s ease'
+    transition: '0.3s',
+    fontSize: '0.95rem'
+  },
+  marqueeWrapper: {
+    width: '100vw',
+    padding: '20px 0'
   },
   card: {
-    minWidth: '320px',
-    background: '#141414',
-    padding: '25px',
-    borderRadius: '16px',
+    minWidth: '300px',
+    background: 'rgba(20, 20, 20, 0.8)',
+    padding: '30px',
+    borderRadius: '20px',
     border: '1px solid #222',
     textAlign: 'left',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+    backdropFilter: 'blur(10px)',
+    margin: '0 10px'
   },
-  cardTitle: { color: '#3b82f6', fontSize: '0.9rem', marginBottom: '10px', fontWeight: '700' },
-  cardDesc: { color: '#777', fontSize: '0.8rem', lineHeight: '1.5' }
+  cardTitle: { color: '#3b82f6', fontSize: '0.85rem', marginBottom: '12px', fontWeight: '800', letterSpacing: '1px' },
+  cardDesc: { color: '#ccc', fontSize: '0.9rem', lineHeight: '1.6', fontWeight: '300' }
 };
 
 export default Home;
