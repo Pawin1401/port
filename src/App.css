@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* สร้างแอนิเมชันให้เลื่อนจากซ้ายไปขวา */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* วิ่งไปครึ่งหนึ่งของความยาวที่เบิ้ลไว้ */
+}
+
+.marquee-container {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  margin-top: 30px;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 20px;
+  animation: marquee 30s linear infinite; /* ปรับเลข 30s ให้เร็วหรือช้าตามชอบ */
+}
+
+/* หยุดวิ่งเมื่อเอาเมาส์ไปวาง */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
