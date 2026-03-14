@@ -2,7 +2,7 @@ import React from 'react';
 // ใช้ชุด Font Awesome (fa) ทั้งหมดเพื่อความเสถียร
 import { 
   FaGithub, 
-  FaLinkedin, 
+  // ลบ FaLinkedin ออกจากบรรทัดนี้หากไม่ได้ใช้ใน Code ด้านล่าง
   FaEnvelope, 
   FaPhoneAlt, 
   FaMapMarkerAlt, 
