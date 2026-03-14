@@ -22,7 +22,7 @@ const About = () => {
 
                     <div style={styles.contactList}>
                         <div style={styles.contactItem}>
-                            <span>📍</span>
+                            <span style={styles.icon}>📍</span>
                             <p style={styles.contactText}>
                                 280/2 Thanaphat Rungrueang Building,<br />
                                 Wongsawang Road, Bang Sue, Bangkok 10800
@@ -30,12 +30,12 @@ const About = () => {
                         </div>
 
                         <div style={styles.contactItem}>
-                            <span>📧</span>
+                            <span style={styles.icon}>📧</span>
                             <p style={styles.contactText}>Pawin1401@gmail.com</p>
                         </div>
 
                         <div style={styles.contactItem}>
-                            <span>📞</span>
+                            <span style={styles.icon}>📞</span>
                             <p style={styles.contactText}>093-2750170</p>
                         </div>
                     </div>
@@ -45,54 +45,45 @@ const About = () => {
             {/* --- Education Section --- */}
             <div style={styles.section}>
                 <h3 style={styles.subTitle}>EDUCATION</h3>
-
-                {/* มหาวิทยาลัยปัจจุบัน */}
                 <div style={{ marginBottom: '25px' }}>
-                    <p style={styles.text}>
-                        <strong>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (KMUTNB)</strong><br />
-                        เทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์ (Electronics Computer Technology)<br />
-                        <em>เน้นการศึกษาด้านระบบสมองกลฝังตัว, สถาปัตยกรรมคอมพิวเตอร์ และการพัฒนาซอฟต์แวร์ระดับประยุกต์</em>
+                    <p style={styles.textHighlight}>
+                        มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (KMUTNB)
+                    </p>
+                    <p style={styles.textSub}>เทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์ (Electronics Computer Technology)</p>
+                    <p style={styles.textDetail}>
+                        เน้นการศึกษาด้านระบบสมองกลฝังตัว, สถาปัตยกรรมคอมพิวเตอร์ และการพัฒนาซอฟต์แวร์ระดับประยุกต์
                     </p>
                 </div>
 
-                {/* ประวัติจากวิทยาลัยเทคนิค */}
                 <div>
-                    <p style={styles.text}>
-                        <strong>วิทยาลัยเทคนิคราชบุรี (RTC)</strong><br />
-                        คอมพิวเตอร์ฮาร์ดแวร์ (Computer Hardware)<br />
-                        <em>เชี่ยวชาญการวิเคราะห์และซ่อมบำรุงอุปกรณ์คอมพิวเตอร์ รวมถึงการจัดการระบบโครงสร้างพื้นฐานด้านไอที</em>
+                    <p style={styles.textHighlight}>วิทยาลัยเทคนิคราชบุรี (RTC)</p>
+                    <p style={styles.textSub}>คอมพิวเตอร์ฮาร์ดแวร์ (Computer Hardware)</p>
+                    <p style={styles.textDetail}>
+                        เชี่ยวชาญการวิเคราะห์และซ่อมบำรุงอุปกรณ์คอมพิวเตอร์ รวมถึงการจัดการระบบโครงสร้างพื้นฐานด้านไอที
                     </p>
                 </div>
             </div>
+
             {/* --- Internship Experience Section --- */}
             <div style={styles.section}>
                 <h3 style={styles.subTitle}>INTERNSHIP EXPERIENCE</h3>
                 <div style={{ marginBottom: '15px' }}>
-                    <p style={styles.text}>
-                        <strong>[แอดไวซ์ โพธาราม]</strong> | 27 ก.พ.2566-6 พ.ค.2566<br />
-                        <em>IT Support & Hardware Technician Intern</em>
-                    </p>
+                    <p style={styles.textHighlight}>แอดไวซ์ โพธาราม <span style={styles.dateText}>| 27 ก.พ. 2566 - 6 พ.ค. 2566</span></p>
+                    <p style={styles.textSub}>IT Support & Hardware Technician Intern</p>
                     <ul style={styles.list}>
-                        <li style={styles.listItem}>
-                            ดำเนินการซ่อมบำรุงและวิเคราะห์ปัญหา Hardware คอมพิวเตอร์ระดับ Component
-                        </li>
-                        <li style={styles.listItem}>
-                            ดูแลและจัดการระบบโครงสร้างพื้นฐานเครือข่าย (Network Infrastructure) ภายในองค์กร
-                        </li>
+                        <li style={styles.listItem}>ดำเนินการซ่อมบำรุงและวิเคราะห์ปัญหา Hardware คอมพิวเตอร์ระดับ Component</li>
+                        <li style={styles.listItem}>ดูแลและจัดการระบบโครงสร้างพื้นฐานเครือข่าย (Network Infrastructure) ภายในองค์กร</li>
                     </ul>
                 </div>
             </div>
-            {/* --- ส่วนเป้าหมายและความสนใจ --- */}
+
+            {/* --- Passion Section --- */}
             <div style={styles.section}>
                 <h3 style={styles.subTitle}>MY PASSION</h3>
-                <p style={styles.text}>
-                    ผมหลงใหลในการเชื่อมต่อ **Hardware** เข้ากับ **Software** เพื่อสร้างนวัตกรรมใหม่ๆ
-                    ผมชอบทำความเข้าใจตั้งแต่ระดับแรงดันไฟฟ้าในวงจร ไปจนถึงการเขียนโปรแกรมบน Cloud
-                    เป้าหมายของผมคือการเป็น Full-stack Developer ที่เข้าใจระบบคอมพิวเตอร์อย่างครบวงจร
+                <p style={styles.textDetail}>
+                    ผมหลงใหลในการเชื่อมต่อ <span style={styles.keyword}>Hardware</span> เข้ากับ <span style={styles.keyword}>Software</span> ไปจนถึงการเขียนโปรแกรมบน <span style={styles.keyword}>Cloud</span> เป้าหมายของผมคือการเป็น Full-stack Developer ที่เข้าใจระบบคอมพิวเตอร์อย่างครบวงจร
                 </p>
             </div>
-
-
         </div>
     );
 };
@@ -105,83 +96,73 @@ const styles = {
         backgroundColor: '#0a0a0a',
         minHeight: '100vh',
         color: 'white',
-        fontFamily: "'Inter', sans-serif"
+        fontFamily: "'Inter', 'Sarabun', sans-serif", // เพิ่ม Sarabun เผื่ออ่านไทย
+        lineHeight: '1.6'
     },
     title: {
-        fontSize: '2.5rem',
+        fontSize: '2.8rem',
         color: '#3b82f6',
-        borderBottom: '2px solid #333',
-        paddingBottom: '20px',
-        marginBottom: '40px',
+        borderBottom: '2px solid #1e40af',
+        paddingBottom: '15px',
+        marginBottom: '50px',
         textAlign: 'center',
-        fontWeight: '800'
+        fontWeight: '900',
+        letterSpacing: '2px',
+        textShadow: '0 4px 10px rgba(59, 130, 246, 0.3)'
     },
     profileSection: {
         display: 'flex',
         alignItems: 'center',
-        gap: '40px',
-        marginBottom: '40px',
-        background: '#141414',
+        gap: '45px',
+        marginBottom: '50px',
+        background: 'linear-gradient(145deg, #141414, #1a1a1a)',
         padding: '40px',
-        borderRadius: '15px',
-        border: '1px solid #222',
+        borderRadius: '20px',
+        border: '1px solid #333',
         flexWrap: 'wrap',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
     },
     imageContainer: {
-        width: '180px',
-        height: '180px',
+        width: '190px',
+        height: '190px',
         borderRadius: '50%',
         overflow: 'hidden',
         border: '4px solid #3b82f6',
+        boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)'
     },
-    profileImg: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-    },
-    profileInfo: {
-        textAlign: 'left'
-    },
-    nameLabel: { fontSize: '1.8rem', color: '#fff', margin: '0' },
-    nicknameLabel: { fontSize: '1.2rem', color: '#3b82f6', margin: '5px 0 15px 0' },
-    contactText: { margin: '5px 0', color: '#aaa', fontSize: '1rem' },
+    profileImg: { width: '100%', height: '100%', objectFit: 'cover' },
+    profileInfo: { textAlign: 'left' },
+    nameLabel: { fontSize: '2.2rem', color: '#fff', margin: '0', fontWeight: '800', letterSpacing: '0.5px' },
+    nicknameLabel: { fontSize: '1.3rem', color: '#3b82f6', margin: '5px 0 20px 0', fontWeight: '600' },
+    contactList: { display: 'flex', flexDirection: 'column', gap: '12px' },
+    contactItem: { display: 'flex', alignItems: 'flex-start', gap: '12px' },
+    icon: { fontSize: '1.1rem' },
+    contactText: { margin: '0', color: '#bbb', fontSize: '0.95rem', fontWeight: '400' },
     section: {
-        marginBottom: '30px',
-        background: '#141414',
-        padding: '30px',
-        borderRadius: '15px',
-        border: '1px solid #222'
+        marginBottom: '35px',
+        background: '#111',
+        padding: '35px',
+        borderRadius: '18px',
+        border: '1px solid #222',
+        transition: 'transform 0.3s ease'
     },
-    subTitle: { color: '#3b82f6', fontSize: '1.2rem', marginBottom: '15px', fontWeight: 'bold' },
-    text: { lineHeight: '1.8', color: '#ccc', fontSize: '1.05rem' },
-    list: { paddingLeft: '20px', marginTop: '10px' },
-    listItem: { color: '#ccc', marginBottom: '12px', lineHeight: '1.6' },
-    skillGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginTop: '15px' },
-    skillCategory: { background: '#1a1a1a', padding: '20px', borderRadius: '10px', border: '1px solid #333' },
-    skillHeader: { color: '#3b82f6', marginBottom: '10px', fontSize: '1rem', fontWeight: 'bold' },
-    skillList: { color: '#bbb', fontSize: '0.9rem', lineHeight: '1.6' },
-    actionContainer: { display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '40px', marginBottom: '50px' },
-    downloadBtn: {
-        padding: '15px 30px',
-        backgroundColor: '#3b82f6',
-        color: 'white',
-        border: 'none',
-        borderRadius: '50px',
-        cursor: 'pointer',
-        fontWeight: 'bold',
-        transition: '0.3s'
+    subTitle: { 
+        color: '#3b82f6', 
+        fontSize: '1.4rem', 
+        marginBottom: '20px', 
+        fontWeight: '800', 
+        letterSpacing: '1px',
+        borderLeft: '4px solid #3b82f6',
+        paddingLeft: '15px'
     },
-    githubBtn: {
-        padding: '15px 30px',
-        backgroundColor: 'transparent',
-        color: '#3b82f6',
-        border: '1px solid #3b82f6',
-        borderRadius: '50px',
-        cursor: 'pointer',
-        fontWeight: 'bold',
-        transition: '0.3s'
-    }
+    textHighlight: { fontSize: '1.15rem', color: '#fff', fontWeight: '700', marginBottom: '5px' },
+    textSub: { fontSize: '1rem', color: '#3b82f6', fontWeight: '500', marginBottom: '8px' },
+    textDetail: { fontSize: '1.05rem', color: '#ccc', fontWeight: '300', lineHeight: '1.8' },
+    dateText: { fontSize: '0.9rem', color: '#666', fontWeight: '400' },
+    keyword: { color: '#60a5fa', fontWeight: '600' },
+    list: { paddingLeft: '20px', marginTop: '15px' },
+    listItem: { color: '#aaa', marginBottom: '10px', fontSize: '1rem', fontWeight: '300' },
 };
 
 export default About;
