@@ -41,11 +41,6 @@ const Home = () => {
             นักศึกษา <span style={styles.accentText}>เทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์</span> @KMUTNB<br/>
             <span style={styles.description}>"ออกแบบวงจร พัฒนาสมองกล เชื่อมโยง Software สู่โลกความเป็นจริง"</span>
           </p>
-
-          <div style={styles.buttonGroup}>
-             <button style={styles.primaryBtn}>Explore Projects</button>
-             <button style={styles.secondaryBtn}>Contact Me</button>
-          </div>
         </div>
 
         {/* --- Marquee Section --- */}

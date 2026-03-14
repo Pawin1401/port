@@ -101,7 +101,7 @@ const Contact = () => {
       </div>
 
       <footer style={styles.footer}>
-        <p>© 2026 <span style={styles.footerName}>PAWIN.DEV</span></p>
+        <p>© 2026 <span style={styles.footerName}>PAWIN</span></p>
         <p style={styles.footerSub}>Electronics Computer Technology Student @KMUTNB</p>
       </footer>
     </div>

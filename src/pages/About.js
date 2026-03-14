@@ -1,5 +1,13 @@
 import React from 'react';
 import ProfilePic from '../pic/2.jpg';
+// นำเข้า Icons ที่เกี่ยวข้อง
+import { 
+    FaUser, 
+    FaGraduationCap, 
+    FaBriefcase, 
+    FaLightbulb, 
+    FaBullseye 
+} from 'react-icons/fa';
 
 const About = () => {
     return (
@@ -44,7 +52,7 @@ const About = () => {
 
             {/* --- Education Section --- */}
             <div style={styles.section}>
-                <h3 style={styles.subTitle}>EDUCATION</h3>
+                <h3 style={styles.subTitle}><FaGraduationCap style={styles.titleIcon} /> EDUCATION</h3>
                 <div style={{ marginBottom: '25px' }}>
                     <p style={styles.textHighlight}>
                         มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (KMUTNB)
@@ -66,7 +74,7 @@ const About = () => {
 
             {/* --- Internship Experience Section --- */}
             <div style={styles.section}>
-                <h3 style={styles.subTitle}>INTERNSHIP EXPERIENCE</h3>
+                <h3 style={styles.subTitle}><FaBriefcase style={styles.titleIcon} /> INTERNSHIP EXPERIENCE</h3>
                 <div style={{ marginBottom: '15px' }}>
                     <p style={styles.textHighlight}>แอดไวซ์ โพธาราม <span style={styles.dateText}>| 27 ก.พ. 2566 - 6 พ.ค. 2566</span></p>
                     <p style={styles.textSub}>IT Support & Hardware Technician Intern</p>
@@ -79,9 +87,19 @@ const About = () => {
 
             {/* --- Passion Section --- */}
             <div style={styles.section}>
-                <h3 style={styles.subTitle}>MY PASSION</h3>
+                <h3 style={styles.subTitle}><FaLightbulb style={styles.titleIcon} /> MY PASSION</h3>
                 <p style={styles.textDetail}>
                     ผมหลงใหลในการเชื่อมต่อ <span style={styles.keyword}>Hardware</span> เข้ากับ <span style={styles.keyword}>Software</span> ไปจนถึงการเขียนโปรแกรมบน <span style={styles.keyword}>Cloud</span> เป้าหมายของผมคือการเป็น Full-stack Developer ที่เข้าใจระบบคอมพิวเตอร์อย่างครบวงจร
+                </p>
+            </div>
+
+            {/* --- Career Goals Section --- */}
+            <div style={styles.section}>
+                <h3 style={styles.subTitle}><FaBullseye style={styles.titleIcon} /> CAREER GOALS</h3>
+                <p style={styles.textDetail}>
+                    มุ่งสู่การเป็น <span style={styles.keyword}>Embedded Software Engineer</span> ที่มีความเชี่ยวชาญในด้านการพัฒนา <span style={styles.keyword}>IoT Ecosystems</span> 
+                    โดยใช้ความรู้จากสายอิเล็กทรอนิกส์และคอมพิวเตอร์ในการสร้างนวัตกรรมที่สามารถแก้ปัญหาได้จริงในระดับอุตสาหกรรม 
+                    และพัฒนาตนเองสู่บทบาท <span style={styles.keyword}>System Architect</span> ในอนาคต
                 </p>
             </div>
         </div>
@@ -96,7 +114,7 @@ const styles = {
         backgroundColor: '#0a0a0a',
         minHeight: '100vh',
         color: 'white',
-        fontFamily: "'Inter', 'Sarabun', sans-serif", // เพิ่ม Sarabun เผื่ออ่านไทย
+        fontFamily: "'Inter', 'Sarabun', sans-serif",
         lineHeight: '1.6'
     },
     title: {
@@ -154,7 +172,14 @@ const styles = {
         fontWeight: '800', 
         letterSpacing: '1px',
         borderLeft: '4px solid #3b82f6',
-        paddingLeft: '15px'
+        paddingLeft: '15px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px'
+    },
+    titleIcon: {
+        fontSize: '1.2rem',
+        color: '#3b82f6'
     },
     textHighlight: { fontSize: '1.15rem', color: '#fff', fontWeight: '700', marginBottom: '5px' },
     textSub: { fontSize: '1rem', color: '#3b82f6', fontWeight: '500', marginBottom: '8px' },
