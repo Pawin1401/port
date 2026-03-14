@@ -26,7 +26,7 @@ const Home = () => {
           Hello, I'm <span style={styles.highlightText}>
             <Typewriter
               options={{
-                strings: ["Pawin Saetan", "Computer Tech Student", "Electronics Dev"],
+                strings: ["Computer Tech Student", "Electronics Dev"],
                 autoStart: true,
                 loop: true,
                 delay: 75,
