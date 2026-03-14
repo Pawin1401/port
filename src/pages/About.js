@@ -2,7 +2,6 @@ import React from 'react';
 import ProfilePic from '../pic/2.jpg';
 // นำเข้า Icons ที่เกี่ยวข้อง
 import { 
-    FaUser, 
     FaGraduationCap, 
     FaBriefcase, 
     FaLightbulb, 
