@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav style={styles.nav}>
-      <h2 style={{ color: '#61dafb' }}>Pawin's Port</h2>
+      <h2 style={{ color: '#61dafb' }}>Pawin Portfolio</h2>
       <div style={styles.links}>
         <Link to="/" style={styles.link}>Home</Link>
         <Link to="/about" style={styles.link}>About</Link>
