@@ -17,8 +17,8 @@ const About = () => {
                 </div>
 
                 <div style={styles.profileInfo}>
-                    <h1 style={styles.nameLabel}>Pawin [ใส่นามสกุลจริง]</h1>
-                    <h3 style={styles.nicknameLabel}>(Pawin)</h3>
+                    <h1 style={styles.nameLabel}>Pawin Saetan</h1>
+                    <h3 style={styles.nicknameLabel}>Pat</h3>
 
                     <div style={styles.contactList}>
                         <div style={styles.contactItem}>
@@ -64,45 +64,35 @@ const About = () => {
                     </p>
                 </div>
             </div>
-
-            {/* --- Why Me Section (จุดแข็งลูกผสม Hardware + Software) --- */}
+            {/* --- Internship Experience Section --- */}
             <div style={styles.section}>
-                <h3 style={styles.subTitle}>WHY ME?</h3>
+                <h3 style={styles.subTitle}>INTERNSHIP EXPERIENCE</h3>
+                <div style={{ marginBottom: '15px' }}>
+                    <p style={styles.text}>
+                        <strong>[แอดไวซ์ โพธาราม]</strong> | 27 ก.พ.2566-6 พ.ค.2566<br />
+                        <em>IT Support & Hardware Technician Intern</em>
+                    </p>
+                    <ul style={styles.list}>
+                        <li style={styles.listItem}>
+                            ดำเนินการซ่อมบำรุงและวิเคราะห์ปัญหา Hardware คอมพิวเตอร์ระดับ Component
+                        </li>
+                        <li style={styles.listItem}>
+                            ดูแลและจัดการระบบโครงสร้างพื้นฐานเครือข่าย (Network Infrastructure) ภายในองค์กร
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {/* --- ส่วนเป้าหมายและความสนใจ --- */}
+            <div style={styles.section}>
+                <h3 style={styles.subTitle}>MY PASSION</h3>
                 <p style={styles.text}>
-                    ด้วยพื้นฐานจากสาย **คอมพิวเตอร์ฮาร์ดแวร์ (ปวช./ปวส.)** ผสานกับ **เทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์ (มจพ.)** ทำให้ผมมีความเข้าใจระบบคอมพิวเตอร์อย่างลึกซึ้ง ตั้งแต่เลเยอร์ของแรงดันไฟฟ้าและลายวงจร (Hardware),
-                    การควบคุมไมโครคอนโทรลเลอร์ (Embedded Systems), ไปจนถึงการพัฒนาแอปพลิเคชันสมัยใหม่ (Software)
-                    ผมจึงสามารถออกแบบระบบที่ทำงานร่วมกันได้อย่างมีประสิทธิภาพสูงสุด
+                    ผมหลงใหลในการเชื่อมต่อ **Hardware** เข้ากับ **Software** เพื่อสร้างนวัตกรรมใหม่ๆ
+                    ผมชอบทำความเข้าใจตั้งแต่ระดับแรงดันไฟฟ้าในวงจร ไปจนถึงการเขียนโปรแกรมบน Cloud
+                    เป้าหมายของผมคือการเป็น Full-stack Developer ที่เข้าใจระบบคอมพิวเตอร์อย่างครบวงจร
                 </p>
             </div>
 
 
-            {/* --- Why Me Section (จุดแข็งลูกผสม Hardware + Software) --- */}
-            <div style={styles.section}>
-                <h3 style={styles.subTitle}>WHY ME?</h3>
-                <p style={styles.text}>
-                    ด้วยพื้นฐานจากสาย **คอมพิวเตอร์ฮาร์ดแวร์ (ปวช./ปวส.)** ผสานกับ **เทคโนโลยีอิเล็กทรอนิกส์คอมพิวเตอร์ (มจพ.)** ทำให้ผมมีความเข้าใจระบบคอมพิวเตอร์อย่างลึกซึ้ง ตั้งแต่เลเยอร์ของแรงดันไฟฟ้าและลายวงจร (Hardware),
-                    การควบคุมไมโครคอนโทรลเลอร์ (Embedded Systems), ไปจนถึงการพัฒนาแอปพลิเคชันสมัยใหม่ (Software)
-                    ผมจึงสามารถออกแบบระบบที่ทำงานร่วมกันได้อย่างมีประสิทธิภาพสูงสุด
-                </p>
-            </div>
-
-
-
-            {/* --- Notable Projects Section --- */}
-            <div style={styles.section}>
-                <h3 style={styles.subTitle}>NOTABLE PROJECTS</h3>
-                <ul style={styles.list}>
-                    <li style={styles.listItem}>
-                        <strong>Smart IoT Integration:</strong> พัฒนาระบบควบคุมอุปกรณ์ไฟฟ้าผ่าน Mobile App โดยใช้ Flutter เชื่อมต่อกับ ESP32
-                    </li>
-                    <li style={styles.listItem}>
-                        <strong>Hardware Diagnostics:</strong> มีประสบการณ์วิเคราะห์อาการเสียและซ่อมบำรุงเมนบอร์ดคอมพิวเตอร์ในระดับ Hardware
-                    </li>
-                    <li style={styles.listItem}>
-                        <strong>Embedded System Design:</strong> ออกแบบและเขียนโปรแกรมควบคุมระบบอัตโนมัติด้วยภาษา C/C++ บน Arduino และ STM32
-                    </li>
-                </ul>
-            </div>
         </div>
     );
 };
