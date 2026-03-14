@@ -80,11 +80,7 @@ const Transcript = () => {
             <span style={styles.sumLabel}>CUMULATIVE GPAX</span>
             <span style={styles.sumValue}>2.30</span>
           </div>
-          <div style={styles.divider}></div>
-          <div style={styles.summaryItem}>
-            <span style={styles.sumLabel}>CREDITS EARNED</span>
-            <span style={styles.sumValue}>60</span>
-          </div>
+          
         </div>
 
         {/* Tab Navigation */}
